@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="alg_comparator.h" />
+    <ClInclude Include="alg_crossover.h" />
+    <ClInclude Include="alg_environmental_selection.h" />
+    <ClInclude Include="alg_individual.h" />
+    <ClInclude Include="alg_initialization.h" />
+    <ClInclude Include="alg_mutation.h" />
+    <ClInclude Include="alg_nondominated_sort.h" />
+    <ClInclude Include="alg_nsgaiii.h" />
+    <ClInclude Include="alg_population.h" />
+    <ClInclude Include="alg_reference_point.h" />
+    <ClInclude Include="aux_math.h" />
+    <ClInclude Include="aux_misc.h" />
+    <ClInclude Include="BoundaryUniformMutation.h" />
+    <ClInclude Include="exp_experiment.h" />
+    <ClInclude Include="exp_indicator.h" />
+    <ClInclude Include="FlipBitMutation.h" />
+    <ClInclude Include="gnuplot_interface.h" />
+    <ClInclude Include="log.h" />
+    <ClInclude Include="problem_base.h" />
+    <ClInclude Include="problem_DTLZ.h" />
+    <ClInclude Include="problem_factory.h" />
+    <ClInclude Include="problem_self.h" />
+    <ClInclude Include="problem_ZDT.h" />
+    <ClInclude Include="SimulatedBGX.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="alg_comparator.cpp" />
+    <ClCompile Include="alg_crossover.cpp" />
+    <ClCompile Include="alg_environmental_selection.cpp" />
+    <ClCompile Include="alg_individual.cpp" />
+    <ClCompile Include="alg_initialization.cpp" />
+    <ClCompile Include="alg_mutation.cpp" />
+    <ClCompile Include="alg_nondominated_sort.cpp" />
+    <ClCompile Include="alg_nsgaiii.cpp" />
+    <ClCompile Include="alg_reference_point.cpp" />
+    <ClCompile Include="aux_math.cpp" />
+    <ClCompile Include="aux_misc.cpp" />
+    <ClCompile Include="BoundaryUniformMutation.cpp" />
+    <ClCompile Include="exp_experiment.cpp" />
+    <ClCompile Include="exp_indicator.cpp" />
+    <ClCompile Include="FlipBitMutation.cpp" />
+    <ClCompile Include="gnuplot_interface.cpp" />
+    <ClCompile Include="log.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="problem_DTLZ.cpp" />
+    <ClCompile Include="problem_factory.cpp" />
+    <ClCompile Include="problem_self.cpp" />
+    <ClCompile Include="problem_ZDT.cpp" />
+    <ClCompile Include="SimulatedBGX.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7D8EACBE-34BA-4005-AC9D-122D53419A4A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>NSGAIII</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
